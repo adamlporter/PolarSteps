@@ -14,7 +14,16 @@ If you want to get your journal entries into a word processor, the JSON file is 
 
 This python program focuses on making the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any text editor or word processor, for further editing and stylistic improvement.
 
-Usage:
-Navigate to the folder with the `trip.json` file and run this program. The program assumes the user hasn't renamed the file created by Polarsteps, so the input filename doesn't need to be specified.
+How to use:
+1. download the program (polar_to_txt.py).
+1. use your file explorer to find the folder with the Polarsteps files (where you extracted the folders from the ZIP file you downloaded from Polarsteps).
+1. start a terminal / powershell in your file explorer so that the terminal directory is where the `trip.json` file is located.
+1. run the program
+ * you can do this by copying the `polar_to_txt.py` program to the same folder where the `trip.json` file is located. If you do this, you would run the program by
+  > python3 polar_to_txt.py <enter>
 
-The program will create an output file with a filename based on the trip name and start date (""Spain_2022-09-07.txt"). The output file will be saved in the same directory as the input file.
+  * OR you can provide the path to the download folder where the `polar_to_text.py` was saved. If you do this, you wold run the program by 
+  > python3 \user\username\downloads\polar_to_txt.py <enter>
+
+
+The program will create an output file with a filename based on the trip name and start date ("Spain_2021-09-01.txt"). The output file will be saved in the same directory as the input file.
