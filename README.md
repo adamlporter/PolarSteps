@@ -15,15 +15,21 @@ If you want to get your journal entries into a word processor, the JSON file is 
 This python program focuses on making the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any text editor or word processor, for further editing and stylistic improvement.
 
 How to use:
-1. download the program (polar_to_txt.py).
-1. use your file explorer to find the folder with the Polarsteps files (where you extracted the folders from the ZIP file you downloaded from Polarsteps).
-1. start a terminal / powershell in your file explorer so that the terminal directory is where the `trip.json` file is located.
-1. run the program
- * you can do this by copying the `polar_to_txt.py` program to the same folder where the `trip.json` file is located. If you do this, you would run the program by
-  > python3 polar_to_txt.py <enter>
-
-  * OR you can provide the path to the download folder where the `polar_to_text.py` was saved. If you do this, you wold run the program by 
-  > python3 \user\username\downloads\polar_to_txt.py <enter>
-
-
+1. download the program (`polar_to_txt.py`) from this github repo.
+1. follow the link above to request your data archive from Polarsteps and download it to your computer.
+1. Open the ZIP file and extract the folders.
+1. use your file explorer to find the folder where you extracted the folders in the prior step. You are looking for the folder with the `trip.json` file.
+1. start a terminal / powershell in this folder.
+1. run the program. The easiest way to do this is to specify the path to download folder where you saved the program. To run the program this way, in your terminal type:
+```
+    python3 \path_to_the_folder\polar_to_txt.py <enter>
+```
+* On a Windows computer, the **path_to_the_folder** might look like this:
+```
+    python3 \Users\user\Download\polar_to_txt.py <enter>
+```
+* Alternately, you could copy the program into the same directory as `trip.json` file is loaded. After copying the program into the folder, you would run it by typing:
+```
+    python3 polar_to_txt.py <enter>
+```
 The program will create an output file with a filename based on the trip name and start date ("Spain_2021-09-01.txt"). The output file will be saved in the same directory as the input file.
