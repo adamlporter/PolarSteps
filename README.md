@@ -33,3 +33,6 @@ How to use:
     python3 polar_to_txt.py <enter>
 ```
 The program will create an output file with a filename based on the trip name and start date (`Spain_2021-09-01.txt`). The output file will be saved in the same directory as the input file.
+
+Known Issues:
+ * I think there is something wrong with the date-time stamp conversion. (I didn't do any journal entries at 3am!) I'm trying to figure this out and will update the program when I do. If you have ideas, please let me know!
