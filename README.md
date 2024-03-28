@@ -14,6 +14,8 @@ If you want to get your journal entries into a word processor, the JSON file is 
 
 This python program focuses on making the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any text editor or word processor, for further editing and stylistic improvement.
 
+**Note**: To run this program, you will need to have the [dateutil](https://github.com/dateutil/dateutil) library installed on your system. Polar Steps saves data in universal time; I try to convert it to local time when outputting it.
+
 How to use:
 1. download the program (`polar_to_txt.py`) from this github repo.
 1. follow the link above to request your data archive from Polarsteps and download it to your computer.
