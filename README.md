@@ -2,9 +2,9 @@ __[Polarsteps](https://www.polarsteps.com)__ is an excellent travel / journallin
 
 Polarsteps has a great utility that will take your online data and covert it into a book.
 
-But what if you want to get your journal entries to run through Word or another wordprocess?
+But what if you want to get your journal entries to run through a wordprocessor?
 
-PS has __[clear directions](https://support.polarsteps.com/article/124-how-can-i-export-a-copy-of-my-data)__ about how to download all your data. This will create a zip file with folders for each of your trips. Download and open the zip file. Inside, you will find a `user` folder and a `trip` folder. In the `trip` folder, you will find folders for each trip you have logged with PolarSteps. Each folder contains: 
+PS has __[clear directions](https://support.polarsteps.com/article/124-how-can-i-export-a-copy-of-my-data)__ about how to download all your data. Following their directions will create a zip file with folders for each of your trips. Download and open the zip file. Inside, you will find a `user` folder and a `trip` folder. In the `trip` folder, you will find folders for each trip you have logged with PolarSteps. Each folder contains: 
 
 1. one or more folders for each location you log; each contains folders for photos and/or videos.
 1. `locations.json` - a file with all your lat/lon information in JSON format. 
@@ -12,16 +12,16 @@ PS has __[clear directions](https://support.polarsteps.com/article/124-how-can-i
 
 Unfortunately, if you open the `trip.json` file with a word processor or text editor, the result is VERY confusing and hard to work with (as is typical for JSON files!).
 
-This python program focuses on making the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any text editor or word processor, for further editing and stylistic improvement.
+This program makes the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any  word processor, for further editing and stylistic improvement.
 
 There are two ways to run this program.
 1. **The easiest way is to run it in Google's Colab.** 
     1. Click on the `Process PolarSteps JSON in Colab.ipynb` file to open it in GitHub.
-    1. Look in the address bar. It should say `https://github.com/adamlporter/PolarSteps/blob. . . `. Change `github.com` to `githubtocolab.com` and it <enter>. This should open the notebook in Colab.
+    1. Look in the address bar. It should say `https://github.com/adamlporter/PolarSteps/blob. . . `. Change `github.com` to `githubtocolab.com` and press  \<enter\>. This will open the notebook in Colab.
     1. Additional directions for using the program are in the Colab notebook.
 1. The other way is to download the `polar_to_txt.py` program and run it on your local system. The rest of this document explains how to do this.
 
-If you choose the latter option, you will need to have the [dateutil](https://github.com/dateutil/dateutil) library installed on your system (this allows the program to adjust the date-time stamps to the local time when you made the post).
+If you choose the latter option, you will need to have the [dateutil](https://github.com/dateutil/dateutil) library installed on your system (this allows the program to adjust the date-time stamps on the journal entries from Universal time to local time).
 
 Instructions on how to run the file locally are below.
 
