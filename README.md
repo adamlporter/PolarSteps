@@ -4,17 +4,26 @@ Polarsteps has a great utility that will take your online data and covert it int
 
 But what if you want to get your journal entries to run through Word or another wordprocess?
 
-PS has __[clear directions](https://support.polarsteps.com/article/124-how-can-i-export-a-copy-of-my-data)__ about how to download all your data. This will create a zip file with folders for each of your trips. Once you unpack these, in each folder you will find:
-1. `photos` - a folder with all your photos
-1. `videos` - a folder with all your videos
-1. `locations.json` - a file with all your lat/long information in JSON format. 
-1. `trip.json` - a file with all your journal / text entries in JSON format.
+PS has __[clear directions](https://support.polarsteps.com/article/124-how-can-i-export-a-copy-of-my-data)__ about how to download all your data. This will create a zip file with folders for each of your trips. Download and open the zip file. Inside, you will find a `user` folder and a `trip` folder. In the `trip` folder, you will find folders for each trip you have logged with PolarSteps. Each folder contains: 
 
-If you open the `trip.json` file with a word processor or text editor, the result is VERY confusing and hard to work with (as is typical for JSON files!).
+1. one or more folders for each location you log; each contains folders for photos and/or videos.
+1. `locations.json` - a file with all your lat/lon information in JSON format. 
+1. **`trip.json`** - a file with all your journal / text entries in JSON format. This is the file this program will process!
+
+Unfortunately, if you open the `trip.json` file with a word processor or text editor, the result is VERY confusing and hard to work with (as is typical for JSON files!).
 
 This python program focuses on making the journal entries usable by reading the JSON file, extracting the most useful parts, and saving them as a TXT file. This file can be read by any text editor or word processor, for further editing and stylistic improvement.
 
-**Note**: To run this program, you will need to have the [dateutil](https://github.com/dateutil/dateutil) library installed on your system. Polar Steps saves data in universal time; I try to convert it to local time when outputting it.
+There are two ways to run this program.
+1. **The easiest way is to run it in Google's Colab.** 
+    1. Click on the `Process PolarSteps JSON in Colab.ipynb` file to open it in GitHub.
+    1. Look in the address bar. It should say `https://github.com/adamlporter/PolarSteps/blob. . . `. Change `github.com` to `githubtocolab.com` and it <enter>. This should open the notebook in Colab.
+    1. Additional directions for using the program are in the Colab notebook.
+1. The other way is to download the `polar_to_txt.py` program and run it on your local system. The rest of this document explains how to do this.
+
+If you choose the latter option, you will need to have the [dateutil](https://github.com/dateutil/dateutil) library installed on your system (this allows the program to adjust the date-time stamps to the local time when you made the post).
+
+Instructions on how to run the file locally are below.
 
 How to use:
 1. download the program (`polar_to_txt.py`) from this github repo.
